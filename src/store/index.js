@@ -31,6 +31,7 @@
 import { configureStore, createSlice } from "@reduxjs/toolkit";
 import authSlice from "./auth-slice";
 import cartSlice from "./cart-slice";
+import uiSlice from "./ui-slice";
 const counterSlice = createSlice({
   name: "counter",
   initialState: { counter: 0 },
@@ -54,6 +55,7 @@ const store = configureStore({
     counter: counterSlice.reducer,
     auth: authSlice.reducer,
     cart: cartSlice.reducer,
+    ui: uiSlice.reducer,
   },
 });
 

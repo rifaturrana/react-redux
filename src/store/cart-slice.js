@@ -4,6 +4,10 @@ const cartSlice = createSlice({
   name: "cart",
   initialState: { itemsList: [], totalQuantity: 0, showCart: false },
   reducers: {
+    replaceData(state, action) {
+      state.totalQuantity = action.payload.totalQuantity;
+      state.itemsList = action.payload.itemsList;
+    },
     addToCart(state, action) {
       const newItem = action.payload;
       //toCheck if the item is already in the cart
