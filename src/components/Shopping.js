@@ -31,13 +31,10 @@ const Shopping = () => {
             type: "warning",
           })
         );
-        const res = await fetch(
-          "https://react-redux-4e09e-default-rtdb.firebaseio.com/cartItems.json",
-          {
-            method: "PUT",
-            body: JSON.stringify(cart),
-          }
-        );
+        const res = await fetch("Firebase project URL", {
+          method: "PUT",
+          body: JSON.stringify(cart),
+        });
         const data = await res.json();
         dispatch(
           uiActions.showNotification({
